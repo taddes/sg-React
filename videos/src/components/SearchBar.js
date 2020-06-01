@@ -3,15 +3,20 @@ import React, { Component } from 'react';
 
 class SearchBar extends Component {
 
-  state = { term: "khakkhalaj" };
-  onInputChange = () => {
+  state = { term: '' };
+
+  onInputChange = event => {
+    this.setState({ term: event.target.value });
+  };
+
+  onFormSubmit = event => {
 
   }
 
   render() {
     return (
       <div className='search-bar ui segment'>
-        <form action="" className="ui form">
+        <form onSubmit={this.onFormSubmit} action="" className="ui form">
           <div className="field">
             <label htmlFor="">Video Search</label>
             <input 
