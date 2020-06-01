@@ -10,8 +10,12 @@ class SearchBar extends Component {
   };
 
   onFormSubmit = event => {
+    event.preventDefault();
 
-  }
+    // TODO: call a callback from parent
+    // Tell app that user submitted form
+
+  };
 
   render() {
     return (
@@ -21,8 +25,9 @@ class SearchBar extends Component {
             <label htmlFor="">Video Search</label>
             <input 
               type="text" 
-              value={this.state.term} />
+              value={this.state.term} 
               onChange={this.onInputChange}
+            />
           </div>
         </form>
       </div>
