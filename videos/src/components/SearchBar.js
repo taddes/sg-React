@@ -12,9 +12,7 @@ class SearchBar extends Component {
   onFormSubmit = event => {
     event.preventDefault();
 
-    // TODO: call a callback from parent
-    // Tell app that user submitted form
-
+    this.props.onFormSubmit(this.state.term);
   };
 
   render() {
